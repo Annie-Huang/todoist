@@ -10,3 +10,4 @@ C:\react>npx create-react-app todoist
 C:\react\todoist>npm run start
 http://localhost:3000/
 
+C:\react\todoist>npm install react-icons
