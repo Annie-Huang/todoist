@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=hT3j87FMR6M
+https://github.com/karlhadwen/todoist
+https://github.com/Annie-Huang/todoist
+
+
+=========================================================
+
+C:\react>npx create-react-app todoist
+
+C:\react\todoist>npm run start
+http://localhost:3000/
+
