@@ -210,6 +210,51 @@ header {
   }
 }
 
+/* Sidebar
+  ============================================ */
+.sidebar {
+  @include no-select();
+  width: 266px;
+  height: calc(100vh);
+  padding-top: 74px;
+  position: fixed;
+  // css doesn't have a overlay-x|y properties...
+  overlay-x: hidden;
+  overlay-y: hidden;
+  border-right: $generic-border;
+  background-color: #fafafa;
+
+  @include mq('900px') {
+    display: none;
+  }
+
+  li {
+    padding-left: 10px;
+    padding-right: 15px;
+    &:hover .sidebar__project-delete {
+      display: block;
+    }
+  }
+
+  &__project {
+    padding: 5px 0;
+    cursor: pointer;
+    &-delete {
+      margin-left: auto;
+      display: none;
+      svg {
+        color: #cacaca;
+      }
+      &.active, &:hover {
+        font-weight: bold;
+        background-color: white;
+      }
+    }
+  }
+
+}
+
+
 
 
 
