@@ -23,5 +23,15 @@ export const Sidebar = () => (
                 <span>Next 7 days</span>
             </li>
         </ul>
+
+        <div className="sidebar__middle">
+            <span>
+                <FaChevronDown />
+            </span>
+            <h2>Projects</h2>
+        </div>
+
+        <ul className="sidebar__projects">Projects will be here!</ul>
+        Add Project Components Here!!
     </div>
 );
