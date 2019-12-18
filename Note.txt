@@ -2,7 +2,11 @@ https://www.youtube.com/watch?v=hT3j87FMR6M
 https://github.com/karlhadwen/todoist
 https://github.com/Annie-Huang/todoist
 
+https://console.firebase.google.com/project/todolist-7fcaf
 
+
+https://firebase.google.com/
+https://console.firebase.google.com/u/0/
 =========================================================
 
 C:\react>npx create-react-app todoist
