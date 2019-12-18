@@ -66,10 +66,59 @@ $generic-bg: #db4c3f;
   user-select: none;
 }
 
+@mixin btn($width) {
+  width: $width;
+  background-color: $generic-bg;
+  color: #fff !important;
+  border: 1px solid transparent;
+  margin-right: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 13px !important;
+  line-height: 17px;
+  padding: 6px 12px 7px 12px;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 3px !important;
+  text-decoration: none !important;
+  text-align: center;
+  cursor: pointer;
+}
 
+@mixin cancel() {
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 2px 5px;
+}
 
+@mixin task-item() {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 18px;
+  color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  list-style-type: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 10px;
+  cursor: pointer;
 
+  &:hover {
+    background-color: #f9f9f9;
+  }
+}
 
+// Media query.
+@mixin mq($from) {
+  @media (max-width: $from) {
+    @content;
+  }
+}
 
 
 
