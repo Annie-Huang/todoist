@@ -17,3 +17,4 @@ http://localhost:3000/
 C:\react\todoist>npm install react-icons
 C:\react\todoist>npm install --save firebase
 C:\react\todoist>npm install --save node-sass
+C:\react\todoist>npm install moment
