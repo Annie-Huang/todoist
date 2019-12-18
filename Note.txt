@@ -2,11 +2,12 @@ https://www.youtube.com/watch?v=hT3j87FMR6M
 https://github.com/karlhadwen/todoist
 https://github.com/Annie-Huang/todoist
 
-https://console.firebase.google.com/project/todolist-7fcaf
-
+https://console.firebase.google.com/project/todolist-7fcaf      << Database for this tutorial.
 
 https://firebase.google.com/
 https://console.firebase.google.com/u/0/
+https://www.npmjs.com/package/firebase
+
 =========================================================
 
 C:\react>npx create-react-app todoist
