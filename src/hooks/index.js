@@ -5,6 +5,7 @@ import { collatedTasksExist } from '../helpers';
 
 export const useTasks = selectedProject => {
     const [tasks, setTasks] = useState([]);
+    const [archivedTasks, setArchivedTasks] = useState([]);
     // users, setUsers
     // cats, setCats
 
@@ -45,6 +46,7 @@ export const useTasks = selectedProject => {
                     : newTasks.filter(task => task.archived !== true)
             );
 
+            setArchivedTasks(newTasks.filter(task => task.archived !== false));
         })
 
     }, [selectedProject]);
