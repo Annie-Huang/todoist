@@ -218,9 +218,8 @@ header {
   height: calc(100vh);
   padding-top: 74px;
   position: fixed;
-  // css doesn't have a overlay-x|y properties...
-  overlay-x: hidden;
-  overlay-y: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   border-right: $generic-border;
   background-color: #fafafa;
 
@@ -245,37 +244,38 @@ header {
       svg {
         color: #cacaca;
       }
-      &.active, &:hover {
-        font-weight: bold;
-        background-color: white;
+    }
+    &.active, &:hover {
+      font-weight: bold;
+      background-color: white;
+    }
+    &:nth-child(1) {
+      .sidebar__dot {
+        color: #6accbc;
       }
-      &:nth-child(1) {
-        .sidebar__dot {
-          color: #6accbc;
-        }
+    }
+    &:nth-child(2) {
+      .sidebar__dot {
+        color: #fad003;
       }
-      &:nth-child(2) {
-        .sidebar__dot {
-          color: #fad003;
-        }
+    }
+    &:nth-child(3) {
+      .sidebar__dot {
+        color: #ff8d85;
       }
-      &:nth-child(3) {
-        .sidebar__dot {
-          color: #ff8d85;
-        }
+    }
+    &:nth-child(4) {
+      .sidebar__dot {
+        color: #ff9932;
       }
-      &:nth-child(4) {
-        .sidebar__dot {
-          color: #ff9932;
-        }
-      }
-      &:nth-child(5) {
-        .sidebar__dot {
-          color: #af38eb;
-        }
+    }
+    &:nth-child(5) {
+      .sidebar__dot {
+        color: #af38eb;
       }
     }
   }
+
 
 }
 
