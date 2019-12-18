@@ -55,3 +55,31 @@ export const useTasks = selectedProject => {
 
     return {tasks, archivedTasks};
 };
+
+export const useProjects = () => {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('projects')
+            .where('userId', '==', 'aaaaa')
+            .orderBy('projectId')
+            .get()  // Choose to get it once. Because getting project is less frequent than getting tasks.
+            .then(snapshot => {
+                const allProjects = snapshot.docs.map(project => ({
+                    ...task.data(),
+                    docId: project.id
+                }));
+
+                // Without the following the fetch will get into infinite loop as it's checking the if all projects' pointer
+                // has change and will detect that it has. and then loop through again.
+                if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {
+                    setProjects(allProjects);
+                }
+            });
+
+    }, [projects]);
+
+    return {projects, setProjects};
+};
