@@ -29,12 +29,42 @@ ul {
   padding: 0;
 }
 
+// Variables
+$generic-box-shadow: rgba(0,0,0,0.1) 0 0 0 1px, rgba(0,0,0,0.1) 0 4px 11px;
+$generic-border: 1px solid #f1f1f1;
+$generic-bg: #db4c3f;
 
+/* Mixins
+  ============================================ */
+@mixin box-overlay() {
+  box-shadow: $generic-box-shadow;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 85px;
+  border-radius: 3px;
+}
 
+@mixin va($va-align: center) {
+  display: flex;
+  align-items: center;
 
+  @if $va-align != center {
+    justify-content: left;
+  } @else {
+    justify-content: center;
+  }
+}
 
-
-
+// https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
+// And I don't understand why didn't it just use postcss for auto-prefixer
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 
 
