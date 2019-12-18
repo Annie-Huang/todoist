@@ -68,7 +68,7 @@ export const useProjects = () => {
             .get()  // Choose to get it once. Because getting project is less frequent than getting tasks.
             .then(snapshot => {
                 const allProjects = snapshot.docs.map(project => ({
-                    ...task.data(),
+                    ...project.data(),
                     docId: project.id
                 }));
 
