@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {FaChevronDown, FaInbox, FaRegCalendarAlt, FaRegCalendar} from 'react-icons/fa';
 import {useSelectedProjectValue} from "../../context";
+import {Projects} from "./Projects";
 
 export const Sidebar = () => {
     const { setSelectedProject } = useSelectedProjectValue;
@@ -38,7 +39,7 @@ export const Sidebar = () => {
             </div>
 
             <ul className="sidebar__projects">Projects will be here!</ul>
-            Add Project Components Here!!
+            <Projects />
         </div>
     )
 };

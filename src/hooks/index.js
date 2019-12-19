@@ -63,6 +63,7 @@ export const useProjects = () => {
         firebase
             .firestore()
             .collection('projects')
+            // The following two line cause the error of no index in firebase, and you will have to create the index. Page 20 in Firebase.docx
             .where('userId', '==', 'aaaaa')
             .orderBy('projectId')
             .get()  // Choose to get it once. Because getting project is less frequent than getting tasks.
