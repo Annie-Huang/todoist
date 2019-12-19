@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {useProjectsValue, useSelectedProjectValue} from "../context";
+import {IndividualPorject} from "./IndividualProject";
 
 export const Projects = ({ activeValue = null }) => {
     const [active, setActive] = useState(activeValue);
@@ -15,12 +16,16 @@ export const Projects = ({ activeValue = null }) => {
                 className={
                     active === project.projectId ? 'active sidebar__project' : 'sidebar__project'
                 }
+                onKeyDown={() => {
+                    setActive(project.projectId);
+                    setSelectedProject(project.projectId)
+                }}
                 onClick={() => {
                     setActive(project.projectId);
                     setSelectedProject(project.projectId)
                 }}
             >
-                {('Project', JSON.stringify(project))}
+                <IndividualPorject project={project}/>
             </li>
         ))
     )
