@@ -276,6 +276,40 @@ header {
     }
   }
 
+  &__projects {
+    padding-left: 3px;
+  }
+  &__project {
+    @include va('left');
+  }
+  &__dot {
+    margin-right: 10px;
+    font-size: 30px;
+  }
+  &__middle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    border-bottom: $generic-border;
+    padding-left: 10px;
+    cursor: pointer;
+    span {
+      color: #0000008a;
+      margin-right: 10px;
+
+      svg.hidden-projects {
+        transform: rotate(-90deg);
+      }
+    }
+    h2 {
+      margin: 0;
+      color: #333;
+      font-size: 15px;
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+  }
+
 
 }
 
